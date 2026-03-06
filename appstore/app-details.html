@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Details — AppLaunch</title>
+    <meta name="description" content="View app details, screenshots, features, and download links.">
+    <meta name="theme-color" content="#05050f">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-logo">AppLaunch</div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- ── NAVBAR ─────────────────────────────────────── -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="AppLaunch home">App<span>Launch</span></a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu" role="menubar">
+            <a href="index.html" class="nav-link" role="menuitem">Home</a>
+            <a href="apps.html" class="nav-link" role="menuitem">Apps</a>
+            <a href="about.html" class="nav-link" role="menuitem">About</a>
+            <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+            <a href="apps.html" class="nav-cta" role="menuitem">Get Apps →</a>
+        </div>
+    </nav>
+
+    <!-- ── PAGE WRAPPER ───────────────────────────────── -->
+    <main class="page-wrapper" style="padding-bottom: 80px;">
+
+        <!-- Back link above details -->
+        <div style="max-width:1100px; margin:0 auto; padding: 24px 40px 0;">
+            <a href="apps.html" class="back-link" id="back-link" aria-label="Back to apps">← All Apps</a>
+        </div>
+
+        <!-- Details container (populated by script.js) -->
+        <div id="app-details-container" role="main" aria-label="App details">
+            <!-- Populated dynamically -->
+        </div>
+
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────── -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-logo">AppLaunch</div>
+        <p>Crafted with ❤️ by <strong>Vaibhav</strong></p>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="apps.html">Apps</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p style="margin-top:12px; font-size:0.78rem; opacity:0.5;">© 2026 AppLaunch. All rights reserved.</p>
+    </footer>
+
+    <!-- ── SCRIPTS ────────────────────────────────────── -->
+    <script src="js/apps-data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/three-scene.js" defer></script>
+
+</body>
+
+</html>

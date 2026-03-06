@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Apps — AppLaunch</title>
+    <meta name="description"
+        content="Browse and download all mobile apps — Android APK builds available for each app.">
+    <meta name="theme-color" content="#05050f">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+
+    <style>
+        .apps-page-header {
+            padding: 60px 40px 0;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .apps-main {
+            padding: 40px 40px 80px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+
+            .apps-page-header,
+            .apps-main {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-logo">AppLaunch</div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- Three.js Canvas -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- ── NAVBAR ─────────────────────────────────────── -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-logo" aria-label="AppLaunch home">App<span>Launch</span></a>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu" role="menubar">
+            <a href="index.html" class="nav-link" role="menuitem">Home</a>
+            <a href="apps.html" class="nav-link" role="menuitem">Apps</a>
+            <a href="about.html" class="nav-link" role="menuitem">About</a>
+            <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+            <a href="apps.html" class="nav-cta" role="menuitem">Get Apps →</a>
+        </div>
+    </nav>
+
+    <!-- ── PAGE WRAPPER ───────────────────────────────── -->
+    <main class="page-wrapper">
+
+        <!-- Page Header -->
+        <header class="apps-page-header" role="banner">
+            <a href="index.html" class="back-link" aria-label="Back to home">← Home</a>
+            <h1 class="page-hero-title"><span class="gradient-text">All Apps</span></h1>
+            <p class="page-hero-desc">Browse, search, and download Android apps.</p>
+        </header>
+
+        <!-- Apps Main -->
+        <div class="apps-main">
+
+            <!-- Search -->
+            <div class="search-container" role="search">
+                <span class="search-icon" aria-hidden="true">🔍</span>
+                <input type="search" id="search-input" placeholder="Search apps by name, category, or tag…"
+                    aria-label="Search apps" autocomplete="off">
+            </div>
+
+            <!-- Category Filters -->
+            <div id="filter-bar" role="group" aria-label="Filter by category">
+                <!-- Populated by script.js -->
+            </div>
+
+            <!-- Results count -->
+            <p class="apps-count" id="apps-count" aria-live="polite"></p>
+
+            <!-- Apps Grid -->
+            <div class="apps-grid" id="apps-grid" aria-label="App cards">
+                <!-- Populated by script.js -->
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────── -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-logo">AppLaunch</div>
+        <p>Crafted with ❤️ by <strong>Vaibhav</strong></p>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="apps.html">Apps</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p style="margin-top:12px; font-size:0.78rem; opacity:0.5;">© 2026 AppLaunch. All rights reserved.</p>
+    </footer>
+
+    <!-- ── SCRIPTS ────────────────────────────────────── -->
+    <script src="js/apps-data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/three-scene.js" defer></script>
+
+</body>
+
+</html>

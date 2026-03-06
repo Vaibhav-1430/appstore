@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+    <style>
+        body { background: #05050f; color: white; padding: 20px; font-family: Arial; }
+        .app-card { background: #1a1a2e; padding: 20px; margin: 10px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Debug Test</h1>
+    <div id="test-output"></div>
+    <div id="apps-grid"></div>
+
+    <script src="js/apps-data.js"></script>
+    <script>
+        const output = document.getElementById('test-output');
+        const grid = document.getElementById('apps-grid');
+        
+        // Test 1: Check if apps-data.js loaded
+        output.innerHTML += '<p>Apps loaded: ' + (typeof apps !== 'undefined') + '</p>';
+        
+        if (typeof apps !== 'undefined') {
+            output.innerHTML += '<p>Number of apps: ' + apps.length + '</p>';
+            output.innerHTML += '<p>Apps: ' + JSON.stringify(apps.map(a => a.name)) + '</p>';
+            
+            // Test 2: Try to render simple cards
+            apps.forEach(app => {
+                const card = document.createElement('div');
+                card.className = 'app-card';
+                card.innerHTML = `
+                    <h3>${app.name}</h3>
+                    <p>${app.description}</p>
+                    <img src="${app.icon}" alt="${app.name}" style="width:64px;height:64px;" onerror="this.style.border='2px solid red'">
+                `;
+                grid.appendChild(card);
+            });
+        } else {
+            output.innerHTML += '<p style="color:red">ERROR: apps array not found!</p>';
+        }
+    </script>
+</body>
+</html>
