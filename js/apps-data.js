@@ -34,9 +34,10 @@ const apps = [
         size: "67 MB",
         minOS: "Android 6.0+",
         rating: 4.8,
-        downloads: "500+",
+        downloads: "5+",
         screenshots: [],   // add screenshot paths here e.g. "images/safepay-ss1.png"
         features: [
+            "Consent Based Payment",
             "Escrow-based secure payments",
             "Real-time transaction tracking",
             "Built-in dispute resolution",
@@ -44,7 +45,7 @@ const apps = [
             "Instant KYC verification",
             "End-to-end encryption",
             "QR code payments",
-            "Multi-currency support"
+            
         ],
         tags: ["Finance", "Payments", "Security", "Fintech"],
         color: "#00d4ff",   // accent colour for cards/details
