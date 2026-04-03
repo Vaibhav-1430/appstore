@@ -59,7 +59,7 @@ const apps = [
         longDescription: `Civil DPR transforms how construction projects are managed on-site. Whether you're a site supervisor or a project manager overseeing multiple locations, Civil DPR gives you real-time visibility into attendance, materials, labour, and daily progress.\n\nWith GPS-based geo-fencing, only personnel physically on-site can mark attendance — preventing proxy entries. Supervisors can submit detailed daily progress reports with photos, and admins get a consolidated dashboard across all projects.`,
         category: "Productivity",
         icon: "images/civildpr.png",
-        android: null,
+        android: "download/CivilDpr.apk",
         version: "1.0.1",
         size: "24 MB",
         minOS: "Android 7.0+",
